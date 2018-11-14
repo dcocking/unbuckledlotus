@@ -1,11 +1,31 @@
-<div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
-<div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
-<div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
-<div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
-<div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
-<div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
-<div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
-<div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
-<div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
-<div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
-<div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
+<div class="main-content" fxFlex='1 1 auto'>
+
+  <div class="test" fxLayout="row" fxLayoutAlign="center center"></div>
+
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <button mat-button="mat-button" (click)="showHide()">CLICK TO SHOW/HIDE</button>
+  </div>
+
+  <div class='container' *ngIf='currentState' @openClose @slideIn>
+    <div class='content'>Something Here</div>
+    <div class='content'>Something Here</div>
+    <div class='content'>Something Here</div>
+    <div class='content'>Something Here</div>
+    <div class='content'>Something Here</div>
+    <div class='content'>Something Here</div>
+    <div class='content'>Something Here</div>
+    <div class='content'>Something Here</div>
+  </div>
+
+  <div class="test" fxLayout="row" fxLayoutAlign="center center"></div>
+  <div class="test" fxLayout="row" fxLayoutAlign="center center"></div>
+  <div class="test" fxLayout="row" fxLayoutAlign="center center"></div>
+  <div class="test" fxLayout="row" fxLayoutAlign="center center"></div>
+  <div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
+  <div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
+  <div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
+  <div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
+  <div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
+  <div class="test" fxLayout="row" fxLayoutAlign="center center">Something Here</div>
+
+</div>

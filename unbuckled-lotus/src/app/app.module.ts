@@ -16,7 +16,8 @@ import { MessageBusService } from './services/messagebus/messagebus.service';
 import { 
   HeaderComponent,
   FooterComponent,
-  HomeComponent 
+  HomeComponent,
+  LinksComponent,
 } from './components';
 
 @NgModule({
@@ -24,7 +25,8 @@ import {
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,
