@@ -11,29 +11,40 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   animations: [
 
     trigger('openClose', [
+
       transition(':enter', [
         style({ opacity: 0, height: 0 }),
         animate('300ms ease-in-out', style({ opacity: 1, height: 200 })),
       ]),
+
       transition(':leave', [
         style({ opacity: '*', height: '*' }),
         animate('300ms ease-in-out', style({ opacity: 0, height: 0 })),
-      ]),
+      ])
     ]),
 
     trigger('slideIn', [
-      transition(':enter', [
-          query('.content', [
-            style({ opacity: 0, transform: 'translateX(-100px)' }),
-            stagger(85, [
-              animate('300ms ease-in-out', style({ opacity: 1, transform: 'none' })),
-            ]),
-          ])
-        ]), 
-     ]),
-  ]
 
+      transition(':enter', [
+        query('.content', [
+          style({ opacity: 0, transform: 'translateX(-100px)' }),
+          stagger(250, [
+            animate('300ms ease-in-out', style({ opacity: 1, transform: 'none' })),
+          ]),
+        ])
+      ]),
+
+      transition(':leave', [
+        query('.content', [
+          stagger(250, [
+            animate('300ms ease-in-out', style({ opacity: 0, transform: 'translateX(-100px)' })),
+          ]),
+        ])
+      ])
+    ])
+  ]
 })
+
 export class HomeComponent implements OnInit {
 
   currentState;

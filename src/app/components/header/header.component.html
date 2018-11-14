@@ -1,5 +1,15 @@
-<div class='header' fxLayout='column' [@collapseExpand]='collapseExpand' >TEST
-  <div fxLayout='row'>
-    <app-links fxFlex='1 1 50' fxShow='' fxHide.lt-sm='true'></app-links>
+<div class='header' [@headerScroll]='headerState'>
+  <div class='inner'>
+    <div class='brand'>
+      <i id='flash_on' class='material-icons ico-big'>flash_on</i>
+    </div>
+    <div class='links-tray'>
+      <div class='link'><i class="material-icons ico-big">terrain</i></div>
+      <div class='link'>DASHBOARD</div>
+      <div class='link'>FAQ</div>
+      <button mat-button='mat-button'>
+        SIGN-UP
+      </button>
+    </div>
   </div>
 </div>

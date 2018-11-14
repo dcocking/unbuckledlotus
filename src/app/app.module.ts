@@ -17,7 +17,6 @@ import {
   HeaderComponent,
   FooterComponent,
   HomeComponent,
-  LinksComponent,
 } from './components';
 
 @NgModule({
@@ -26,7 +25,6 @@ import {
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    LinksComponent
   ],
   imports: [
     BrowserModule,
