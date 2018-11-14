@@ -25,7 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       transition(':enter', [
           query('.content', [
             style({ opacity: 0, transform: 'translateX(-100px)' }),
-            stagger(-30, [
+            stagger(85, [
               animate('300ms ease-in-out', style({ opacity: 1, transform: 'none' })),
             ]),
           ])
@@ -36,7 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 export class HomeComponent implements OnInit {
 
-  @Input() currentState;
+  currentState;
 
   showHide() {
     this.currentState = !this.currentState;
