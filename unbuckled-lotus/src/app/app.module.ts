@@ -11,9 +11,20 @@ import { MaterialModule } from '../material/material.module'
 // Services
 import { MessageBusService } from './services/messagebus/messagebus.service';
 
+// Components
+
+import { 
+  HeaderComponent,
+  FooterComponent,
+  HomeComponent 
+} from './components';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +32,9 @@ import { MessageBusService } from './services/messagebus/messagebus.service';
     BrowserAnimationsModule,
     MaterialModule,
   ],
-  providers: [],
+  providers: [
+    MessageBusService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
