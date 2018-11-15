@@ -6,6 +6,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
 @import url('https://fonts.googleapis.com/css?family=Play');
 
+////////////////// GLOBAL ///////////////////
+
 body, html {
     height: 100%;
     margin: 0px;
@@ -15,29 +17,31 @@ body, html {
   body {
     display: block;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    font-family: "Play", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   .wrapper {
-      min-height: 110%;
+      min-height: 150%;
       min-width: 100%;
       padding: 0px;
       margin: 0px;
-      background-image: url(./assets/custom-orange.svg);
-      background-color: blue;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-color: #eeeeee;
+    //   background-image: url(./assets/custom-orange.svg);
+    //   background-color: blue;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
   }
 
-////////////////// HEADER STYLES ///////////////////
+////////////////// HEADER ///////////////////
 
 .pre-header {
-  position: fixed;
-  width: 100%;
-  height: 65px;
-  background-color: aqua;
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid rgba(0,0,0,.3);
 }
 
 .header {
@@ -76,16 +80,15 @@ body, html {
         flex-direction: column;
         flex-wrap: nowrap;
             .brand-name {
-                font-family: "Play", sans-serif;
                 font-weight: 600;
                 font-size: 27px;
                 margin-bottom: 5px;
             }
             .tagline {
-                font-family: "Play", sans-serif;
                 font-weight: 200;
                 font-size: 10px;
                 color: rgba(0,0,0,.7);
+                flex: 0 0 auto;
             }
     }
 }
@@ -117,14 +120,51 @@ body, html {
   border-color: rgba(0,0,0,.3);
 }
 
-/////////////////// HOME STYLES ////////////////////
+/////////////////// WORK BENCH ////////////////////
 
-    .main-content {
-      min-height: 100vh;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: space-evenly;
-      overflow: hidden;
+    .work-bench {
+        position: fixed;
+        top: 65px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        overflow: hidden;
+    }
+
+/////////////////// TOOL BAR ////////////////////
+
+    .toolbar {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        max-width: 250px;
+        border-right: 1px solid rgba(0,0,0,.7);
+    }
+
+/////////////////// DASHBOARD ////////////////////
+
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 65px;
+    }
+
+    .dashboard-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
     }
