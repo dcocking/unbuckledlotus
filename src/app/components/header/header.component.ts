@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { NgIf } from '@angular/common';
-import { animate, state, style, transition, trigger, keyframes, query, stagger } from '@angular/animations';
+import { animate, state, style, transition, trigger, keyframes, query, stagger,group } from '@angular/animations';
 import { MaterialModule } from '../../../material/material.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageBusService } from '../../services/messagebus/messagebus.service';
@@ -40,12 +40,23 @@ import { MessageBusService } from '../../services/messagebus/messagebus.service'
         ])
       ]),
       transition('off => on', [
-        style({ 'color': '#000', transform:'translateY(-100px)' }),
+        style({ 'color': '#000', transform:'translateY(-100px)', opacity: 0}),
         query(':self', [
-          animate('300ms ease-in-out', style({
+          group([
+            animate('300ms ease-in', style({
+              transform: 'translateY(10px)',
+            })),
+            animate('300ms ease-in', style({
+              'color': '#FAFC37',
+              opacity: 1,
+            }))
+          ]),
+          animate('100ms ease-out', style({
+            transform: 'translateY(0px)',
+          })),
+          animate('300ms ease-out', style({
             'color': '#FCDC3E',
-            transform: 'translateY(0px)'
-          }))
+          })),
         ])
       ])
 
