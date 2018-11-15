@@ -17,7 +17,7 @@ body, html {
   }
 
   .wrapper {
-      min-height: 100%;
+      min-height: 110%;
       min-width: 100%;
       padding: 0px;
       margin: 0px;
@@ -25,10 +25,6 @@ body, html {
       background-color: blue;
       background-repeat: no-repeat;
       background-size: cover;
-  }
-
-  .ico-big {
-      font-size: 35px;
   }
 
 ////////////////// HEADER STYLES ///////////////////
@@ -67,6 +63,10 @@ body, html {
     }
 }
 
+.ico-big {
+  font-size: 35px;
+}
+
 .links-tray {
     width: 100%;
     height: 100%;
@@ -93,24 +93,11 @@ body, html {
 /////////////////// HOME STYLES ////////////////////
 
     .main-content {
-        min-height: 100vh;
-        overflow: hidden;
-    }
-
-    .test {
-    height: 100px;
-    width: 100vw;
-      &:first-of-type {
-          padding-top: 200px;
-          padding-bottom: 100px;
-      }
-      &:last-of-type {
-          padding-top: 100px;
-          padding-bottom: 200px;
-      }
-    }
-
-    .container {
-    background-color: aqua;
-    height: 200px;
+      min-height: 100vh;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: space-evenly;
+      overflow: hidden;
     }
