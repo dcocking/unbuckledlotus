@@ -2,15 +2,18 @@
 <div class="header">
   <div class='inner'>
     <div class='brand' [@lightningStrike]='lightningState'>
-      <i id='flash_on' class='material-icons ico-big'>flash_on</i>
+      <i id='flash-on' class='material-icons ico-big'>flash_on</i>
     </div>
-    <div class='links-tray'>
+    <div class='links-tray' fxShow fxHide.lt-md='true'>
       <div class='link'><i class="material-icons ico-big" [@glowLinks]='headerState'>terrain</i></div>
-      <div class='link'><a href="http://example.com" [@glowLinks]='headerState'>DASHBOARD</a></div>
-      <div class='link'><a href="http://example.com" [@glowLinks]='headerState'>FAQ</a></div>
-      <button mat-button='mat-button' [@glowLinks]='headerState'>
+      <div class='link' routerLink='.' [@glowLinks]='headerState'>DASHBOARD</div>
+      <div class='link' routerLink='.' [@glowLinks]='headerState'>FAQ</div>
+      <button id="sign-up" mat-stroked-button routerLink='.' [@glowLinks]='headerState'>
         SIGN-UP
       </button>
     </div>
+    <button id="mobile-menu" mat-button routerLink='.' fxHide fxShow.lt-md='true'>
+      <i class="material-icons">menu</i>
+    </button>
   </div>
 </div>

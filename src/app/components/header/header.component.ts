@@ -1,9 +1,8 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { animate, state, style, transition, trigger, keyframes, query, stagger, group } from '@angular/animations';
-import { MaterialModule } from '../../../material/material.module'
+import { MaterialModule } from '../../../material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MessageBusService } from '../../services/messagebus/messagebus.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +13,7 @@ import { MessageBusService } from '../../services/messagebus/messagebus.service'
 
     trigger('headerScroll', [
       state('home', style({
-        background: 'rgba(0,0,0,0)'
+        background: 'rgba(0,0,0,0)',
       })),
       state('away', style({
         background: 'rgba(0,0,0,0.8)',
@@ -69,10 +68,12 @@ import { MessageBusService } from '../../services/messagebus/messagebus.service'
 
     trigger('glowLinks', [
       state('home', style({
-        'color': '#000'
+        'color': '#000',
+        'border-color': 'rgba(0,0,0,.3)'
       })),
       state('away', style({
-        'color': '#FCDC3E'
+        'color': '#FCDC3E',
+        'border-color': '#FCDC3E'
       })),
       transition('home <=> away', [
         query(':self', [
@@ -88,7 +89,7 @@ export class HeaderComponent implements OnInit {
   headerState: string = 'home';
   lightningState: string = 'off';
 
-  constructor(private el: ElementRef, private messageBus: MessageBusService) { }
+  constructor(private el: ElementRef) { }
 
   @HostListener('window:scroll', ['$event'])
 
