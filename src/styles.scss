@@ -28,11 +28,11 @@ body, html {
       min-width: 100%;
       padding: 0px;
       margin: 0px;
-      background-color: #eeeeee;
-    //   background-image: url(./assets/custom-orange.svg);
-    //   background-color: blue;
-    //   background-repeat: no-repeat;
-    //   background-size: cover;
+    //   background-color: #eeeeee;
+      background-image: url(./assets/custom-orange.svg);
+      background-color: blue;
+      background-repeat: no-repeat;
+      background-size: cover;
   }
 
 ////////////////// HEADER ///////////////////
@@ -141,7 +141,37 @@ body, html {
         flex-direction: column;
         height: 100%;
         max-width: 250px;
-        border-right: 1px solid rgba(0,0,0,.7);
+        border-right: 1px solid rgba(0,0,0,.3);
+    }
+
+    .tool-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+        color: rgba(0,0,0,.5);  
+        border-bottom: 1px solid rgba(0,0,0,.3);
+    }
+
+    .tool {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 65px;
+            i {
+                font-size: 25px;
+                width: 40px;
+                text-align: center;
+            }
+            img {
+                width: 40px;
+            }
+    }
+
+    .tool-title {
+        padding-left: 12px;
     }
 
 /////////////////// DASHBOARD ////////////////////
@@ -154,7 +184,7 @@ body, html {
         padding-right: 20px;
     }
 
-    .title {
+    .dashboard-title {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
