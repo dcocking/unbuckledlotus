@@ -5,10 +5,10 @@
       <i id='flash_on' class='material-icons ico-big'>flash_on</i>
     </div>
     <div class='links-tray'>
-      <div class='link'><i class="material-icons ico-big">terrain</i></div>
-      <div class='link'>DASHBOARD</div>
-      <div class='link'>FAQ</div>
-      <button mat-button='mat-button'>
+      <div class='link'><i class="material-icons ico-big" [@glowLinks]='headerState'>terrain</i></div>
+      <div class='link'><a href="http://example.com" [@glowLinks]='headerState'>DASHBOARD</a></div>
+      <div class='link'><a href="http://example.com" [@glowLinks]='headerState'>FAQ</a></div>
+      <button mat-button='mat-button' [@glowLinks]='headerState'>
         SIGN-UP
       </button>
     </div>
