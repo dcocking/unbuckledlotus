@@ -1,11 +1,17 @@
 <div class='pre-header' [@headerScroll]='headerState'></div>
 <div class="header">
   <div class='inner'>
-    <div class='brand' [@lightningStrike]='lightningState'>
-      <i id='flash-on' class='material-icons ico-big'>flash_on</i>
+    <div class='brand'>
+      <div class="brand-inner">
+        <i id='flash-on' class='material-icons ico-big' [@lightningStrike]='lightningState'>flash_on</i>
+        <div class='brand-text'>
+          <div class='brand-name' [@glowLinks]='headerState'>Pipp.ai</div>
+          <div class='tagline' [@glowLinks]='headerState'>SMART TOOLS FOR THE #CRYPTONATION</div>
+        </div>
+      </div>
     </div>
     <div class='links-tray' fxShow fxHide.lt-md='true'>
-      <div class='link'><i class="material-icons ico-big" [@glowLinks]='headerState'>terrain</i></div>
+      <div class='link'><i class="material-icons ico-big" [@glowLinks]='headerState'>home</i></div>
       <div class='link' routerLink='.' [@glowLinks]='headerState'>DASHBOARD</div>
       <div class='link' routerLink='.' [@glowLinks]='headerState'>FAQ</div>
       <button id="sign-up" mat-stroked-button routerLink='.' [@glowLinks]='headerState'>
