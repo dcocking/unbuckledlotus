@@ -47,12 +47,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export class HomeComponent implements OnInit {
 
-  // currentState;
+  currentState;
 
-  // showHide() {
-  //   this.currentState = !this.currentState;
-  //   // console.log(this.currentState);
-  // }
+  showHide() {
+    this.currentState = !this.currentState;
+    // console.log(this.currentState);
+  }
 
   constructor() { }
 
