@@ -10,6 +10,7 @@ import { MaterialModule } from '../material/material.module'
 
 // Services
 import { MessageBusService } from './services/messagebus/messagebus.service';
+import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 
 // Components
 
@@ -19,6 +20,8 @@ import {
   HomeComponent,
   ToolbarComponent,
   DashboardComponent,
+  MonitorComponent,
+  SimulatorComponent
 } from './components';
 
 @NgModule({
@@ -29,6 +32,8 @@ import {
     HomeComponent,
     ToolbarComponent,
     DashboardComponent,
+    MonitorComponent,
+    SimulatorComponent,
   ],
   imports: [
     BrowserModule,

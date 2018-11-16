@@ -140,7 +140,7 @@ body, html {
         display: flex;
         flex-direction: column;
         height: 100%;
-        max-width: 250px;
+        width: 250px;
         border-right: 1px solid rgba(0,0,0,.3);
     }
 
@@ -174,9 +174,9 @@ body, html {
         padding-left: 12px;
     }
 
-/////////////////// DASHBOARD ////////////////////
+/////////////////// ROUTER OUTLET ////////////////////
 
-    .dashboard {
+    .router {
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -184,7 +184,7 @@ body, html {
         padding-right: 20px;
     }
 
-    .dashboard-title {
+    .router-title {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -192,9 +192,14 @@ body, html {
         height: 65px;
     }
 
-    .dashboard-content {
+    .router-content {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+        overflow: auto;
+    }
+
+    #test {
+        height: 110vh;
     }

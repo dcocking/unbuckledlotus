@@ -3,6 +3,7 @@ import { NgIf } from '@angular/common';
 import { animate, state, style, transition, trigger, keyframes, query, stagger, group } from '@angular/animations';
 import { MaterialModule } from '../../../material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MessageBusService } from '../../services/messagebus/messagebus.service';
 
 @Component({
   selector: 'app-header',
@@ -89,7 +90,35 @@ export class HeaderComponent implements OnInit {
   headerState: string = 'home';
   lightningState: string = 'off';
 
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef, private messageBus: MessageBusService) { }
+
+  private subscribeToMessageBus(): void {
+    this.messageBus.event.subscribe((event:Object) => {
+
+      let eventName: string;
+      for (let key in event) {
+        eventName = key;
+      }
+
+      switch(eventName) { 
+
+        case "scrollState": {
+          if(event['scrollState'] == 'true') {
+            this.headerState = 'away';
+            this.lightningState = 'on';
+          } else if (event['scrollState'] == 'false') {
+            this.headerState = 'home';
+            this.lightningState = 'off';
+          }
+          break;   
+      } 
+        default: { 
+            // console.log("Invalid choice"); 
+            break;              
+        } 
+      }
+    });
+  }
 
   @HostListener('window:scroll', ['$event'])
 
@@ -98,12 +127,14 @@ export class HeaderComponent implements OnInit {
     const scrollPosition = window.pageYOffset
     if (scrollPosition > componentPosition) {
       this.headerState = 'away';
-      this.lightningState = 'on';
-      console.log(this.headerState, this.lightningState);
+      this.lightningState = 'on'
+      // console.log(componentPosition);
+      // console.log(scrollPosition)
+      // console.log(this.headerState, this.lightningState);
     } else {
       this.headerState = 'home';
       this.lightningState = 'off';
-      console.log(this.headerState, this.lightningState);
+      // console.log(this.headerState, this.lightningState);
     }
   }
 

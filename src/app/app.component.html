@@ -1,5 +1,12 @@
 <div class="wrapper">
   <app-header></app-header>
-  <router-outlet></router-outlet>
+  <div class="work-bench">
+      <div fxFlex='0 1 250px'>
+        <app-toolbar></app-toolbar>
+      </div>
+      <div fxFlex='1 1 auto'>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
   <app-footer></app-footer>
 </div>
