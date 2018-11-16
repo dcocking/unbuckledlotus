@@ -1,128 +1,40 @@
-<div class='router' fxLayoutGap='20px'>
+<div class='dashboard-wrapper'>
 
-    <div class='router-heading'>CDP CREATOR</div>
-    <div class='router-content'>
-        <div class='router-subheading'>
-            <div fxFlex='50'>Wallet Balances</div>
-            <div fxFlex='50'>Account: 0x1dCgjgdl304m4ncdsfk3kkjkjkjfjddkjkdjkjdsdskj</div>
-        </div>
-        <div class='router-content' fxLayout.xs="column">
-            <mat-table [dataSource]="dataSource" class='wallet'>
-                <!-- Type Column -->
-                <ng-container matColumnDef="type">
-                    <mat-header-cell *matHeaderCellDef> TYPE </mat-header-cell>
-                    <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
-                </ng-container>
-                <!-- ETH Column -->
-                <ng-container matColumnDef="eth">
-                    <mat-header-cell *matHeaderCellDef> ETH </mat-header-cell>
-                    <mat-cell *matCellDef="let element"> {{element.eth}} </mat-cell>
-                </ng-container>
-                <!-- WETH Column -->
-                <ng-container matColumnDef="weth">
-                    <mat-header-cell *matHeaderCellDef> WETH </mat-header-cell>
-                    <mat-cell *matCellDef="let element"> {{element.weth}} </mat-cell>
-                </ng-container>
-                <!-- DAI Column -->
-                <ng-container matColumnDef="dai">
-                    <mat-header-cell *matHeaderCellDef> DAI </mat-header-cell>
-                    <mat-cell *matCellDef="let element"> {{element.dai}} </mat-cell>
-                </ng-container>
-                <!-- USD EQUIVALENT Column -->
-                <ng-container matColumnDef="usdequiv">
-                    <mat-header-cell *matHeaderCellDef> USD EQUIV </mat-header-cell>
-                    <mat-cell *matCellDef="let element"> {{element.usdequiv}} </mat-cell>
-                </ng-container>
-                <!-- CDPS Open Column -->
-                <ng-container matColumnDef="cdpsopen">
-                    <mat-header-cell *matHeaderCellDef> CDP'S OPEN </mat-header-cell>
-                    <mat-cell *matCellDef="let element"> {{element.cdpsopen}} </mat-cell>
-                </ng-container>
-                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-            </mat-table>
-        </div>
-    </div>
-    <div class='router-content' fxLayout.xs='column'>
-        <div fxFlex=''>CDP Leverage Multiplier</div>
+    <mat-toolbar>
+        <h1>CDP CREATOR</h1>
+    </mat-toolbar>
+
+    <div fxLayout='row' fxLayoutAlign='start center' fxLayout.lt-md="column">
+        <mat-toolbar>
+            <h2>Wallet Balances</h2>
+        </mat-toolbar>
+        <mat-toolbar>
+            <h2>Account: 0x1dCgjgdl304m4ncdsfk3kkjkjkjfjddkjkdjkjdsdskj</h2>
+        </mat-toolbar>
     </div>
 
-    <div class='router-content leverage'>
-            <div class='test2'>
-                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                    <div class='leverage-label' fxFlex='0 0 100px'>ETH to Lend:</div>
-                    <form>
-                        <input class='leverage-input' placeholder="10">
-                    </form>
-                </div>
-                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                    <div class='leverage-label' fxFlex='0 0 100px'>Leverage Multiplier:</div>
-                    <div fxLayout='column' fxLayoutAlign='space-evenly center' fxLayoutGap='5px'>
-                        <mat-slider class='leverage-slider' min="1.5" max="2.5" step="0.1" value="2" thumbLabel="true"></mat-slider>
-                        <div class='leverage-slider-numbers' fxFill='' fxLayout='row' fxLayoutAlign='space-between center'>
-                            <div>1.5x</div>
-                            <div>2.0x</div>
-                            <div>2.5x</div>
-                        </div>
-                    </div>
-                </div>
-                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                    <div class='leverage-label' fxFlex='0 0 100px'>Total ETH Leveraged:</div>
-                    <form>
-                        <input class='leverage-input' placeholder="10">
-                    </form>
-                </div>
-            </div>
-        <div fxFlex='50'>
-            <div fxFlexFill='' fxLayout='column' fxLayoutAlign='space-evenly' fxLayoutGap='12px'>
-                <div class='red' fxLayout='row' fxLayoutAlign='start' fxLayoutGap='12px'>
-                    <div fxFlex='0 0 20%'>ETH to Lend</div>
-                    <div fxFlex='1 1 auto'>INPUT</div>
-                </div>
-                <div class='green' fxLayout='row' fxLayoutAlign='start' fxLayoutGap='12px'>
-                    <div fxFlex='0 0 20%'>Leverage Multiplier</div>
-                    <div fxFlex='1 1 auto'>SLIDER</div>
-                </div>
-                <div class='blue' fxLayout='row' fxLayoutAlign='start' fxLayoutGap='12px'>
-                    <div fxFlex='0 0 20%'>Total ETH Leveraged</div>
-                    <div fxFlex='1 1 auto'>SLIDER</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class='router-content' fxLayout.xs='column'>
-        <div fxFlex='50'>Wallet Balances</div>
-        <div fxFlex='50'>Account: 0x1dCgjgdl304m4ncdsfk3kkjkjkjfjddkjkdjkjdsdskj</div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column">
+    <div class='dashboard-table' fxShow='' fxHide.lt-md='true'>
         <mat-table [dataSource]="dataSource" class='wallet'>
-            <!-- Type Column -->
             <ng-container matColumnDef="type">
                 <mat-header-cell *matHeaderCellDef> TYPE </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
             </ng-container>
-            <!-- ETH Column -->
             <ng-container matColumnDef="eth">
                 <mat-header-cell *matHeaderCellDef> ETH </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.eth}} </mat-cell>
             </ng-container>
-            <!-- WETH Column -->
             <ng-container matColumnDef="weth">
                 <mat-header-cell *matHeaderCellDef> WETH </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.weth}} </mat-cell>
             </ng-container>
-            <!-- DAI Column -->
             <ng-container matColumnDef="dai">
                 <mat-header-cell *matHeaderCellDef> DAI </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.dai}} </mat-cell>
             </ng-container>
-            <!-- USD EQUIVALENT Column -->
             <ng-container matColumnDef="usdequiv">
                 <mat-header-cell *matHeaderCellDef> USD EQUIV </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.usdequiv}} </mat-cell>
             </ng-container>
-            <!-- CDPS Open Column -->
             <ng-container matColumnDef="cdpsopen">
                 <mat-header-cell *matHeaderCellDef> CDP'S OPEN </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.cdpsopen}} </mat-cell>
@@ -131,4 +43,58 @@
             <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
         </mat-table>
     </div>
-</div>
+
+    <mat-toolbar>
+        <h2>Leverage Multiplier</h2>
+    </mat-toolbar>
+
+    <div class='leverage-wrapper' fxLayout='row' fxLayout.lt-md='column' fxLayoutGap.lt-md='20px'>
+
+        <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
+            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                <div fxFlex='0 0 100px'>ETH to Lend</div>
+                <form>
+                    <input class='leverage-input' placeholder="10">
+                </form>
+            </div>
+            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                <div fxFlex='0 0 100px'>Leverage Multiplier</div>
+                <div fxLayout='column' fxLayoutAlign='space-evenly center' fxLayoutGap='5px'>
+                    <mat-slider class='leverage-slider' min="1.5" max="2.5" step="0.1" value="2" thumbLabel="true"></mat-slider>
+                    <div class='leverage-slider-numbers' fxFill='' fxLayout='row' fxLayoutAlign='space-between center'>
+                        <div>1.5x</div>
+                        <div>2.0x</div>
+                        <div>2.5x</div>
+                    </div>
+                </div>
+            </div>
+            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                <div fxFlex='0 0 100px'>Total ETH Leveraged</div>
+                <form>
+                    <input class='leverage-input' placeholder="10">
+                </form>
+            </div>
+        </div>
+
+        <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
+            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                <div fxFlex='0 0 100px'>Liquidation Price</div>
+                <form>
+                    <input class='leverage-input' placeholder="$187.51">
+                </form>
+            </div>
+            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                <div fxFlex='0 0 100px'>Estimated Tx Costs</div>
+                <form>
+                    <input class='leverage-input' placeholder="$3.41">
+                </form>
+            </div>
+            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                <div fxFlex='0 0 100px'>Safety Margin</div>
+                <form>
+                    <input class='leverage-input' placeholder='9%'>
+                </form>
+            </div>
+        </div>
+
+    </div>

@@ -2097,6 +2097,8 @@
 //   color: #ffd740
 // }
 
+@import url('https://fonts.googleapis.com/css?family=Play');
+
 .mat-badge-content {
   font-weight: 600;
   font-size: 12px;
@@ -3828,12 +3830,22 @@ input.mat-input-element {
 
 .mat-toolbar,
 .mat-toolbar h1,
-.mat-toolbar h2,
-.mat-toolbar h3,
+// .mat-toolbar h2,
+// .mat-toolbar h3,
 .mat-toolbar h4,
 .mat-toolbar h5,
 .mat-toolbar h6 {
-  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+  font: 600 20px/32px Play, "Play", sans-serif;
+  margin: 0
+}
+
+.mat-toolbar h2 {
+  font: 500 18px/32px Play, "Play", sans-serif;
+  margin: 0
+}
+
+.mat-toolbar h3 {
+  font: 500 16px/32px Play, "Play", sans-serif;
   margin: 0
 }
 
@@ -4538,10 +4550,10 @@ input.mat-input-element {
   }
 }
 
-.mat-cell {
-  // color: #323232;
-  padding-right: 10px;
-}
+// .mat-cell {
+//   color: #323232;
+//   padding-right: 10px;
+// }
 
 .mat-row .mat-cell:last-of-type {
   padding: 0px 0px 0px 0px;
@@ -5420,8 +5432,10 @@ input.mat-input-element {
 }
 
 .mat-toolbar {
-  background: #f5f5f5;
-  color: rgba(0, 0, 0, .87)
+  // background: #f5f5f5;
+  background: rgba(0, 0, 0, .0);
+  color: rgba(0, 0, 0, .87);
+  font-family: "Play", sans-serif;
 }
 
 .mat-toolbar.mat-primary {
