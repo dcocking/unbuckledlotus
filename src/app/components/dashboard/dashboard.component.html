@@ -48,217 +48,103 @@
         <h2>Leverage Multiplier</h2>
     </mat-toolbar>
 
-    <div class='leverage-wrapper' fxLayout='row' fxLayout.lt-md='column' fxLayoutGap.lt-md='20px'>
+    <div class='dashboard-row' fxLayout='row' fxLayoutGap='20px'>
 
-        <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>ETH to Lend</div>
-                <form>
-                    <input class='leverage-input' placeholder="10">
-                </form>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Leverage Multiplier</div>
-                <div fxLayout='column' fxLayoutAlign='space-evenly center' fxLayoutGap='5px'>
-                    <mat-slider class='leverage-slider' min="1.5" max="2.5" step="0.1" value="2" thumbLabel="true"></mat-slider>
-                    <div class='leverage-slider-numbers' fxFill='' fxLayout='row' fxLayoutAlign='space-between center'>
-                        <div>1.5x</div>
-                        <div>2.0x</div>
-                        <div>2.5x</div>
+        <div class='leverage-wrapper' fxLayout='row' fxLayout.lt-md='column' fxLayoutGap.lt-md='20px'>
+            <div class='leverage-content' fxFlex='0 0 50'  fxLayout='column' fxLayoutGap='20px'>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>ETH to Lend</div>
+                    <form>
+                        <input class='leverage-input' placeholder="10">
+                    </form>
+                </div>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>Leverage Multiplier</div>
+                    <div fxLayout='column' fxLayoutAlign='space-evenly center' fxLayoutGap='5px'>
+                        <mat-slider class='leverage-slider' min="1.5" max="2.5" step="0.1" value="2" thumbLabel="true"></mat-slider>
+                        <div class='leverage-slider-numbers' fxFill='' fxLayout='row' fxLayoutAlign='space-between center'>
+                            <div>1.5x</div>
+                            <div>2.0x</div>
+                            <div>2.5x</div>
+                        </div>
                     </div>
                 </div>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>Total ETH Leveraged</div>
+                    <form>
+                        <input class='leverage-input' placeholder="10">
+                    </form>
+                </div>
             </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Total ETH Leveraged</div>
-                <form>
-                    <input class='leverage-input' placeholder="10">
-                </form>
+            <div class='leverage-content' fxFlex='0 0 50' fxLayout='column' fxLayoutGap='20px'>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>Liquidation Price</div>
+                    <form>
+                        <input class='leverage-input' placeholder="$187.51">
+                    </form>
+                </div>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>Estimated Tx Costs</div>
+                    <form>
+                        <input class='leverage-input' placeholder="$3.41">
+                    </form>
+                </div>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>Safety Margin</div>
+                    <form>
+                        <input class='leverage-input' placeholder='9%'>
+                    </form>
+                </div>
             </div>
         </div>
 
-        <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Liquidation Price</div>
-                <form>
-                    <input class='leverage-input' placeholder="$187.51">
-                </form>
+        <div class='leverage-wrapper' fxLayout='row' fxLayout.lt-md='column' fxLayoutGap.lt-md='20px'>
+            <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>ETH to Lend</div>
+                    <form>
+                        <input class='leverage-input' placeholder="10">
+                    </form>
+                </div>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>Leverage Multiplier</div>
+                    <div fxLayout='column' fxLayoutAlign='space-evenly center' fxLayoutGap='5px'>
+                        <mat-slider class='leverage-slider' min="1.5" max="2.5" step="0.1" value="2" thumbLabel="true"></mat-slider>
+                        <div class='leverage-slider-numbers' fxFill='' fxLayout='row' fxLayoutAlign='space-between center'>
+                            <div>1.5x</div>
+                            <div>2.0x</div>
+                            <div>2.5x</div>
+                        </div>
+                    </div>
+                </div>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>Total ETH Leveraged</div>
+                    <form>
+                        <input class='leverage-input' placeholder="10">
+                    </form>
+                </div>
             </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Estimated Tx Costs</div>
-                <form>
-                    <input class='leverage-input' placeholder="$3.41">
-                </form>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Safety Margin</div>
-                <form>
-                    <input class='leverage-input' placeholder='9%'>
-                </form>
+            <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>Liquidation Price</div>
+                    <form>
+                        <input class='leverage-input' placeholder="$187.51">
+                    </form>
+                </div>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>Estimated Tx Costs</div>
+                    <form>
+                        <input class='leverage-input' placeholder="$3.41">
+                    </form>
+                </div>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div fxFlex='0 0 100px'>Safety Margin</div>
+                    <form>
+                        <input class='leverage-input' placeholder='9%'>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-
-    <mat-toolbar>
-        <h2>Leverage Multiplier</h2>
-    </mat-toolbar>
-
-    <div class='leverage-wrapper' fxLayout='row' fxLayout.lt-md='column' fxLayoutGap.lt-md='20px'>
-
-        <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>ETH to Lend</div>
-                <form>
-                    <input class='leverage-input' placeholder="10">
-                </form>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Leverage Multiplier</div>
-                <div fxLayout='column' fxLayoutAlign='space-evenly center' fxLayoutGap='5px'>
-                    <mat-slider class='leverage-slider' min="1.5" max="2.5" step="0.1" value="2" thumbLabel="true"></mat-slider>
-                    <div class='leverage-slider-numbers' fxFill='' fxLayout='row' fxLayoutAlign='space-between center'>
-                        <div>1.5x</div>
-                        <div>2.0x</div>
-                        <div>2.5x</div>
-                    </div>
-                </div>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Total ETH Leveraged</div>
-                <form>
-                    <input class='leverage-input' placeholder="10">
-                </form>
-            </div>
-        </div>
-
-        <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Liquidation Price</div>
-                <form>
-                    <input class='leverage-input' placeholder="$187.51">
-                </form>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Estimated Tx Costs</div>
-                <form>
-                    <input class='leverage-input' placeholder="$3.41">
-                </form>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Safety Margin</div>
-                <form>
-                    <input class='leverage-input' placeholder='9%'>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <mat-toolbar>
-        <h2>Leverage Multiplier</h2>
-    </mat-toolbar>
-
-    <div class='leverage-wrapper' fxLayout='row' fxLayout.lt-md='column' fxLayoutGap.lt-md='20px'>
-
-        <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>ETH to Lend</div>
-                <form>
-                    <input class='leverage-input' placeholder="10">
-                </form>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Leverage Multiplier</div>
-                <div fxLayout='column' fxLayoutAlign='space-evenly center' fxLayoutGap='5px'>
-                    <mat-slider class='leverage-slider' min="1.5" max="2.5" step="0.1" value="2" thumbLabel="true"></mat-slider>
-                    <div class='leverage-slider-numbers' fxFill='' fxLayout='row' fxLayoutAlign='space-between center'>
-                        <div>1.5x</div>
-                        <div>2.0x</div>
-                        <div>2.5x</div>
-                    </div>
-                </div>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Total ETH Leveraged</div>
-                <form>
-                    <input class='leverage-input' placeholder="10">
-                </form>
-            </div>
-        </div>
-
-        <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Liquidation Price</div>
-                <form>
-                    <input class='leverage-input' placeholder="$187.51">
-                </form>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Estimated Tx Costs</div>
-                <form>
-                    <input class='leverage-input' placeholder="$3.41">
-                </form>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Safety Margin</div>
-                <form>
-                    <input class='leverage-input' placeholder='9%'>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <mat-toolbar>
-        <h2>Leverage Multiplier</h2>
-    </mat-toolbar>
-
-    <div class='leverage-wrapper' fxLayout='row' fxLayout.lt-md='column' fxLayoutGap.lt-md='20px'>
-
-        <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>ETH to Lend</div>
-                <form>
-                    <input class='leverage-input' placeholder="10">
-                </form>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Leverage Multiplier</div>
-                <div fxLayout='column' fxLayoutAlign='space-evenly center' fxLayoutGap='5px'>
-                    <mat-slider class='leverage-slider' min="1.5" max="2.5" step="0.1" value="2" thumbLabel="true"></mat-slider>
-                    <div class='leverage-slider-numbers' fxFill='' fxLayout='row' fxLayoutAlign='space-between center'>
-                        <div>1.5x</div>
-                        <div>2.0x</div>
-                        <div>2.5x</div>
-                    </div>
-                </div>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Total ETH Leveraged</div>
-                <form>
-                    <input class='leverage-input' placeholder="10">
-                </form>
-            </div>
-        </div>
-
-        <div class='leverage-content' fxLayout='column' fxLayoutGap='20px'>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Liquidation Price</div>
-                <form>
-                    <input class='leverage-input' placeholder="$187.51">
-                </form>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Estimated Tx Costs</div>
-                <form>
-                    <input class='leverage-input' placeholder="$3.41">
-                </form>
-            </div>
-            <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
-                <div fxFlex='0 0 100px'>Safety Margin</div>
-                <form>
-                    <input class='leverage-input' placeholder='9%'>
-                </form>
-            </div>
-        </div>
-    </div>
-
 
 </div>
