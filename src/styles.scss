@@ -178,21 +178,22 @@ body, html {
 
     .router {
         display: flex;
-        flex-direction: column;
+        flex-direction: column!important;
         height: 100%;
         padding-left: 20px;
         padding-right: 20px;
-    }
-
-    .router-title {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        height: 65px;
+        overflow: auto;
     }
 
     .router-content {
+        width: 100%;
+    }
+
+    .router-heading {
+        height: 65px;
+    }
+
+    .router-subheading {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -215,14 +216,11 @@ body, html {
 
     .leverage {
         background-color: rgba(0,0,0,0.05);
-        padding-left: 24px;
-        padding-right: 24px;
-        padding-top: 12px;
-        padding-bottom: 12px;
     }
 
     .leverage-label {
         text-align: right;
+        min-width: 100px;
     }
 
     .leverage-input {
@@ -232,6 +230,22 @@ body, html {
 
     .leverage-slider {
         min-width: 170px!important;
+        max-height: 30px;
+        padding-top: 0px!important;
+    }
+
+    .leverage-slider-numbers {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.38)
+
+    }
+
+    .test2 {
+        height: 100%;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-top: 24px;
+        margin-bottom: 24px;
     }
 
     .red {
