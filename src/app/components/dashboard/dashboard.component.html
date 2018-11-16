@@ -70,17 +70,23 @@
         </div>
         <div fxFlex='50'>
             <div fxFlexFill='' fxLayout='column' fxLayoutAlign='space-evenly' fxLayoutGap='12px'>
-                <div class='red' fxLayout='row' fxLayoutAlign='start' fxLayoutGap='12px'>
-                    <div fxFlex='0 0 20%'>ETH to Lend</div>
-                    <div fxFlex='1 1 auto'>INPUT</div>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div class='leverage-label' fxFlex='0 0 15%'>Liquidation Price:</div>
+                    <form>
+                        <input class='leverage-input' placeholder="10">
+                    </form>
+                    <div class='leverage-label' fxFlex='0 0 15%'>Safety Margin:</div>
                 </div>
-                <div class='green' fxLayout='row' fxLayoutAlign='start' fxLayoutGap='12px'>
-                    <div fxFlex='0 0 20%'>Leverage Multiplier</div>
-                    <div fxFlex='1 1 auto'>SLIDER</div>
+                <form>
+                    <input class='leverage-input' placeholder="10">
+                </form>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
                 </div>
-                <div class='blue' fxLayout='row' fxLayoutAlign='start' fxLayoutGap='12px'>
-                    <div fxFlex='0 0 20%'>Total ETH Leveraged</div>
-                    <div fxFlex='1 1 auto'>SLIDER</div>
+                <div fxLayout='row' fxLayoutAlign='start center' fxLayoutGap='12px'>
+                    <div class='leverage-label' fxFlex='0 0 15%'>Estimated Tx Costs</div>
+                    <form>
+                        <input class='leverage-input' placeholder="10">
+                    </form>
                 </div>
             </div>
         </div>
