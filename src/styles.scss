@@ -185,10 +185,10 @@ body, html {
     }
 
     .router-title {
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: flex-start;
-        // align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
         height: 65px;
     }
 
@@ -200,10 +200,55 @@ body, html {
         margin-bottom: 12px;
     }
 
+
+
+      
+/////////////////// DASHBOARD ////////////////////
+     
+    #test {
+            height: 110vh;
+        }
+
     .wallet {
         width: 100%;
-      }
+        }
 
-    #test {
-        height: 110vh;
+    .leverage {
+        background-color: rgba(0,0,0,0.05);
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
+
+    .leverage-label {
+        text-align: right;
+    }
+
+    .leverage-input {
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .leverage-slider {
+        min-width: 170px!important;
+    }
+
+    .red {
+        background-color: red;
+        // width: 80px;
+        // height: 80px;
+    }
+
+    .green {
+        background-color: green;
+        // width: 80px;
+        // height: 80px;
+    }
+
+    .blue {
+        background-color: blue;
+        // width: 80px;
+        // height: 80px;
+    }
+

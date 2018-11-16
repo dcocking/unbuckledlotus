@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { animate, state, style, transition, trigger, group, query, stagger} from '@angular/animations';
-import { MatTableDataSource, MatInputModule, MatFormField, MatTable, MatSort, MatButton } from '@angular/material';
+import { MatTableDataSource, MatInputModule, MatFormField, MatTable, MatSort, MatButton, MatSlider } from '@angular/material';
 import { MaterialModule } from '../../../material/material.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
