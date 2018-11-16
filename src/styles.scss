@@ -28,11 +28,11 @@ body, html {
       min-width: 100%;
       padding: 0px;
       margin: 0px;
-    //   background-color: #eeeeee;
-      background-image: url(./assets/custom-orange.svg);
-      background-color: blue;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-color: #eeeeee;
+    //   background-image: url(./assets/custom-orange.svg);
+    //   background-color: blue;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
   }
 
 ////////////////// HEADER ///////////////////
@@ -185,10 +185,10 @@ body, html {
     }
 
     .router-title {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: flex-start;
+        // align-items: center;
         height: 65px;
     }
 
@@ -197,8 +197,12 @@ body, html {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        overflow: auto;
+        margin-bottom: 12px;
     }
+
+    .wallet {
+        width: 100%;
+      }
 
     #test {
         height: 110vh;
