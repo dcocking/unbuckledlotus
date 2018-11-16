@@ -15,7 +15,7 @@ body, html {
   }
 
   body {
-    display: block;
+    // display: block;
     margin: 0;
     // font-family: 'Open Sans', sans-serif;
     font-family: "Play", sans-serif;
@@ -24,12 +24,10 @@ body, html {
   }
 
   .wrapper {
-      height: 100%;
+      position: absolute!important;
       width: 100%;
-      margin: 0px;
-      padding: 0px;
       background-color: #eeeeee;
-      overflow: auto;
+      overflow: none;
     //   background-image: url(./assets/custom-orange.svg);
     //   background-color: blue;
     //   background-repeat: no-repeat;
@@ -174,39 +172,20 @@ body, html {
     .tool-title {
         padding-left: 12px;
     }
-
-/////////////////// ROUTER OUTLET ////////////////////
+    
+//////////////////// ROUTER //////////////////////
 
     .router {
-        display: flex;
-        flex-direction: column!important;
-        height: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-        overflow: auto;
+        height: calc(100vh - 75px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
     }
 
-    .router-content {
-        width: 100%;
-    }
-
-    .router-heading {
-        text-align: center;
-        height: 65px;
-    }
-
-    .router-subheading {
-        margin-bottom: 12px;
-        padding: 16px;
-    }
-
-
-
-      
 /////////////////// DASHBOARD ////////////////////
 
     // .dashboard-wrapper {
-    //     border: 10px solid black;
+    //     // max-height: calc(100vh-65px);
+    //     overflow: auto;
     // }
 
     .dashboard-table {
@@ -235,7 +214,6 @@ body, html {
         padding-right: 24px;
         padding-top: 16px;
         padding-bottom: 16px;
-        // margin-top: 20px;
     }
 
     .leverage-input {
@@ -254,30 +232,4 @@ body, html {
         font-size: 12px;
         color: rgba(0, 0, 0, 0.38)
     }
-
-    // .test2 {
-    //     height: 100%;
-    //     margin-left: 12px;
-    //     margin-right: 12px;
-    //     margin-top: 24px;
-    //     margin-bottom: 24px;
-    // }
-
-    // .red {
-    //     background-color: red;
-    //     // width: 80px;
-    //     // height: 80px;
-    // }
-
-    // .green {
-    //     background-color: green;
-    //     // width: 80px;
-    //     // height: 80px;
-    // }
-
-    // .blue {
-    //     background-color: blue;
-    //     // width: 80px;
-    //     // height: 80px;
-    // }
 
