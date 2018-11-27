@@ -17,11 +17,7 @@ import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 import { 
   HeaderComponent,
   FooterComponent,
-  HomeComponent,
-  ToolbarComponent,
   DashboardComponent,
-  MonitorComponent,
-  SimulatorComponent
 } from './components';
 
 @NgModule({
@@ -29,11 +25,7 @@ import {
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
-    ToolbarComponent,
     DashboardComponent,
-    MonitorComponent,
-    SimulatorComponent,
   ],
   imports: [
     BrowserModule,
